@@ -1,0 +1,73 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+.puzzle-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#word-grid {
+    display: grid;
+    grid-template-columns: repeat(21, 40px); /* Increased cell size 3 times */
+    grid-template-rows: repeat(21, 40px); /* Increased cell size 3 times */
+    gap: 2px;
+    margin: 20px auto;
+    user-select: none; /* Prevent text selection */
+}
+
+#word-grid div {
+    width: 40px; /* Increased cell size 3 times */
+    height: 40px; /* Increased cell size 3 times */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    font-size: 30px; /* Increased font size 3 times */
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+}
+
+#word-list {
+    margin-left: 20px;
+}
+
+#word-list ul {
+    list-style-type: none;
+    padding: 0;
+    user-select: none; /* Prevent text selection */
+}
+
+#word-list li {
+    font-size: 30px; /* Increased font size 3 times */
+    margin-bottom: 5px;
+}
+
+.highlighted {
+    background-color: yellow;
+}
+
+.found {
+    text-decoration: line-through;
+    color: green;
+}
+
+.drag-highlight {
+    background-color: lightblue;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+}
